@@ -16,7 +16,8 @@ export async function getChatResponse(
           role: "system",
           content: `You are a helpful assistant that answers questions based on the provided PDF content. 
                    Only use information from the PDF to answer questions. 
-                   If the answer cannot be found in the PDF, say so.`
+                   If the answer cannot be found in the PDF, say so.
+                   Sometimes you can answer questions based on sentiment if asked.`
         },
         {
           role: "user",
