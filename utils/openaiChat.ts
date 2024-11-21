@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+import { ChatMessage, getChatHistory } from './chatHistory';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -6,24 +7,39 @@ const openai = new OpenAI({
 
 export async function getChatResponse(
   question: string,
-  pdfContent: string
+  pdfContent: string,
+  pdfId: string
 ): Promise<string> {
   try {
+    const chatHistory = getChatHistory(pdfId);
+    const recentMessages = chatHistory.slice(-5); // Get last 5 messages for context
+
+    const messages = [
+      {
+        role: "system",
+        content: `You are a helpful assistant that answers questions based on the provided PDF content. 
+                 Your responses should be:
+                 1. Accurate and based only on the PDF content
+                 2. Contextual, considering the conversation history
+                 3. Clear about when information isn't available in the PDF
+                 4. Capable of referring to previous parts of the conversation
+                 
+                 PDF Content: ${pdfContent}`
+      },
+      // Add recent conversation history
+      ...recentMessages.map(msg => ({
+        role: msg.role,
+        content: msg.content
+      })),
+      {
+        role: "user",
+        content: question
+      }
+    ];
+
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        {
-          role: "system",
-          content: `You are a helpful assistant that answers questions based on the provided PDF content. 
-                   Only use information from the PDF to answer questions. 
-                   If the answer cannot be found in the PDF, say so.
-                   Sometimes you can answer questions based on sentiment if asked.`
-        },
-        {
-          role: "user",
-          content: `PDF Content: ${pdfContent}\n\nQuestion: ${question}`
-        }
-      ],
+      model: "gpt-4-turbo-preview", // Updated to a more capable model
+      messages,
       temperature: 0.7,
       max_tokens: 500,
     });

@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { parse } from '@/utils/pdfProcessor';
 import { getChatResponse } from '@/utils/openaiChat';
+import { saveChatMessage } from '@/utils/chatHistory';
+import { v4 as uuidv4 } from 'uuid';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -16,6 +18,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
+    // Save user message
+    const userMessage = {
+      id: uuidv4(),
+      pdfId,
+      role: 'user' as const,
+      content: question,
+      timestamp: Date.now()
+    };
+    saveChatMessage(userMessage);
+
     // Get all PDFs from database
     const pdfs = parse();
     
@@ -29,7 +41,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Get response from OpenAI
-    const response = await getChatResponse(question, selectedPdf.content);
+    const response = await getChatResponse(question, selectedPdf.content, pdfId);
+
+    // Save assistant message
+    const assistantMessage = {
+      id: uuidv4(),
+      pdfId,
+      role: 'assistant' as const,
+      content: response,
+      timestamp: Date.now()
+    };
+    saveChatMessage(assistantMessage);
 
     res.status(200).json({ response });
   } catch (error) {

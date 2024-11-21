@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from '@/styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
+import { ChatMessage } from '@/utils/chatHistory';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -58,6 +59,22 @@ export default function Home() {
 
     fetchPdfs();
   }, []);
+
+  useEffect(() => {
+    const fetchHistory = async () => {
+      if (selectedPdf) {
+        try {
+          const response = await fetch(`/api/chat-history?pdfId=${selectedPdf}`);
+          const history = await response.json();
+          setMessages(history);
+        } catch (error) {
+          console.error('Error fetching chat history:', error);
+        }
+      }
+    };
+
+    fetchHistory();
+  }, [selectedPdf]);
 
   const handleSendMessage = async () => {
     if (!input.trim() || !selectedPdf) {
