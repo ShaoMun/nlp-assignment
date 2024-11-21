@@ -38,7 +38,7 @@ export async function getChatResponse(
     ];
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4-turbo-preview", // Updated to a more capable model
+      model: "gpt-4o-mini", // Updated to a more capable model
       messages,
       temperature: 0.7,
       max_tokens: 500,
