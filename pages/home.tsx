@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from '@/styles/Home.module.css';
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -124,7 +125,12 @@ export default function Home() {
               key={index}
               className={`${styles.message} ${styles[message.role]}`}
             >
-              {message.content}
+              <div className={styles.messageContent}>
+                <span className={styles.roleIndicator}>
+                  {message.role === 'assistant' ? '🤖 AI' : '👤 You'}:
+                </span>
+                <ReactMarkdown>{message.content}</ReactMarkdown>
+              </div>
             </div>
           ))}
         </div>

@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+} 
