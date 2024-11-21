@@ -12,7 +12,7 @@ export async function getChatResponse(
 ): Promise<string> {
   try {
     const chatHistory = getChatHistory(pdfId);
-    const recentMessages = chatHistory.slice(-5); // Get last 5 messages for context
+    const recentMessages = chatHistory.slice(-5); 
 
     const messages = [
       {
