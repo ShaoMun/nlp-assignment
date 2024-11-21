@@ -23,6 +23,7 @@ export async function getChatResponse(
                  2. Contextual, considering the conversation history
                  3. Clear about when information isn't available in the PDF
                  4. Capable of referring to previous parts of the conversation
+                 5. Sometimes you can have personal opinions but need to be very sure about it and also need to mention that it is your personal opinion.
                  
                  PDF Content: ${pdfContent}`
       },
