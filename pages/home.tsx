@@ -119,7 +119,7 @@ export default function Home() {
           ref={fileInputRef}
           style={{ display: 'none' }}
         />
-        <button onClick={() => fileInputRef.current?.click()}>
+        <button className={styles.button} onClick={() => fileInputRef.current?.click()}>
           Upload PDF
         </button>
         <div className={styles.pdfList}>
@@ -159,7 +159,7 @@ export default function Home() {
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
             placeholder="Ask a question..."
           />
-          <button onClick={handleSendMessage}>Send</button>
+          <button className={styles.button} onClick={handleSendMessage}>Send</button>
         </div>
       </div>
     </div>

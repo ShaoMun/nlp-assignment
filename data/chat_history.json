@@ -41,6 +41,20 @@
       "role": "assistant",
       "content": "Based solely on the information provided in the participant briefing pack, the BRIDG3 Hackathon appears to be a well-organized, comprehensive, and engaging event with a strong focus on innovation, education, and real-world application of blockchain technology. Considering the detailed organization, diverse tracks, and rich learning opportunities, it would be reasonable to rate this event highly. However, without direct feedback from participants or insights into the execution and outcomes of the event, assigning a specific rating out of 10 would be speculative.\n\nIn the context of planning and potential value to participants, this event could be rated around an 8 or 9 out of 10, with the deduction being due to the lack of firsthand experience or external validation of the event's success and impact. This rating reflects the event's strong focus on relevant technological themes, participant support, and the opportunity for networking and professional growth.",
       "timestamp": 1732209608546
+    },
+    {
+      "id": "66f4b40a-875a-4008-aa75-af6e364c645b",
+      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
+      "role": "user",
+      "content": "what can i get from this hackathon",
+      "timestamp": 1732238261408
+    },
+    {
+      "id": "9de6382c-97dd-4d82-aaee-84deadc6ed12",
+      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
+      "role": "assistant",
+      "content": "Participating in the BRIDG3 Hackathon offers several benefits:\n\n1. **Skill Development**: You will have the opportunity to enhance your skills in blockchain technology through hands-on experience and workshops provided by sponsors.\n\n2. **Networking Opportunities**: The event brings together a diverse group of participants, industry professionals, and judges, allowing you to build valuable connections in the blockchain community.\n\n3. **Access to Resources**: Participants will receive resources related to the hackathon tracks, which can aid in developing your projects. This includes documentation from Maschain and Sui to better understand the technologies.\n\n4. **Prizes and Recognition**: There are opportunities to win prizes based on your project’s evaluation, which can provide recognition and potentially lead to further funding or support for your ideas.\n\n5. **Finalist Pitches**: If you make it to the finals, you will have the chance to present your project to an audience of judges and industry experts, which can be beneficial for gaining insights and exposure.\n\n6. **Complimentary Admission**: Participants receive a complimentary general admission pass to the Malaysia Blockchain Week 2024, providing further opportunities to learn and network at the main event.\n\n7. **Workshops and Learning**: Mandatory online workshops leading up to the hackathon will provide additional training and insights into blockchain topics, enhancing your knowledge base.\n\n8. **Community Engagement**: Engaging in a hackathon fosters a sense of community among like-minded individuals passionate about blockchain, leading to potential collaborations beyond the event.\n\nOverall, the BRIDG3 Hackathon is designed to be an enriching experience that can advance your skills, expand your network, and open doors for future opportunities in the blockchain space.",
+      "timestamp": 1732238270016
     }
   ],
   "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167": [
@@ -85,6 +99,20 @@
       "role": "assistant",
       "content": "Based on the content of your resume, it appears to be heavily focused on computer science, software development, and educational achievements related to those fields. While you do have some work experience, such as developing applications and coaching swimming, there is no specific experience or training related to culinary skills or the role of a chef.\n\nTo improve your chances of landing a job as a chef, consider the following:\n\n1. **Relevant Experience**: Highlight any culinary experiences you may have, such as working in a kitchen, catering, or food preparation. If you don't have formal experience, consider taking culinary courses or working in a related role to gain experience.\n\n2. **Skills**: Add skills that are relevant to cooking, such as knowledge of different cuisines, food safety, or kitchen management.\n\n3. **Tailored Resume**: Create a new resume that focuses specifically on your culinary experiences and skills, while minimizing the emphasis on your IT and programming background.\n\n4. **Certifications**: If you have any culinary certifications or training, be sure to include them.\n\nIn summary, your current resume is not suitable for applying for a chef position as it lacks relevant culinary experience and skills. You might want to create a new resume tailored specifically for that career path. If you need help with that, feel free to ask!",
       "timestamp": 1732210310786
+    },
+    {
+      "id": "21d69edb-1922-4a6a-9e30-15ad115842e1",
+      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
+      "role": "user",
+      "content": "roast me on my past prompts",
+      "timestamp": 1732210460505
+    },
+    {
+      "id": "ba592a28-a2d8-4eac-8679-a924441e96f1",
+      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
+      "role": "assistant",
+      "content": "While I understand you may be looking for some light-hearted fun, I want to keep our conversation positive and constructive! However, if we’re having a little roast, here goes:\n\n- Asking if your computer science-heavy resume is suitable for a chef position is like trying to land a role as a magician with a resume that highlights your skills in data analysis. Maybe the only \"cooking\" you should focus on is cooking up some data!\n  \n- When you said \"rate again,\" I half expected a music album drop instead of a resume review—it’s a resume, not a mixtape!\n\nBut in all seriousness, it’s great that you’re exploring different career options and seeking feedback. If there’s anything specific you’d like to discuss or improve, I’m here to help!",
+      "timestamp": 1732210464492
     }
   ]
 }
