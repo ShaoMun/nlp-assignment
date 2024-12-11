@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from '@/styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
 import { ChatMessage } from '@/utils/chatHistory';
+import ParticleBackground from '../components/ParticleBackground';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -115,70 +116,73 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.sidebar}>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFileUpload}
-          ref={fileInputRef}
-          style={{ display: 'none' }}
-        />
-        <button className={styles.button} onClick={() => fileInputRef.current?.click()}>
-          Upload PDF
-        </button>
-        <div className={styles.pdfList}>
-          {pdfs.map((pdf) => (
-            <div
-              key={pdf.id}
-              onClick={() => setSelectedPdf(pdf.id)}
-              className={pdf.id === selectedPdf ? styles.selected : ''}
-            >
-              {pdf.name}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.chat}>
-        <div className={styles.modelSelector}>
-          <select
-            value={selectedModel}
-            onChange={(e) => setSelectedModel(e.target.value as ModelType)}
-            className={styles.modelDropdown}
-          >
-            <option value="gpt4o">GPT-4o-mini</option>
-            <option value="gemini">Gemini 1.5 Flash</option>
-            <option value="llama">Llama 3.2</option>
-            <option value="phi">Phi-3.5</option>
-          </select>
-        </div>
-        <div className={styles.messages}>
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`${styles.message} ${styles[message.role]}`}
-            >
-              <div className={styles.messageContent}>
-                <span className={styles.roleIndicator}>
-                  {message.role === 'assistant' ? '🤖 AI' : '👤 You'}:
-                </span>
-                <ReactMarkdown>{message.content}</ReactMarkdown>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className={styles.inputContainer}>
+    <>
+      <ParticleBackground />
+      <div className={styles.container}>
+        <div className={styles.sidebar}>
           <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Ask a question..."
+            type="file"
+            accept=".pdf"
+            onChange={handleFileUpload}
+            ref={fileInputRef}
+            style={{ display: 'none' }}
           />
-          <button className={styles.button} onClick={handleSendMessage}>Send</button>
+          <button className={styles.button} onClick={() => fileInputRef.current?.click()}>
+            Upload PDF
+          </button>
+          <div className={styles.pdfList}>
+            {pdfs.map((pdf) => (
+              <div
+                key={pdf.id}
+                onClick={() => setSelectedPdf(pdf.id)}
+                className={pdf.id === selectedPdf ? styles.selected : ''}
+              >
+                {pdf.name}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.chat}>
+          <div className={styles.modelSelector}>
+            <select
+              value={selectedModel}
+              onChange={(e) => setSelectedModel(e.target.value as ModelType)}
+              className={styles.modelDropdown}
+            >
+              <option value="gpt4o">GPT-4o-mini</option>
+              <option value="gemini">Gemini 1.5 Flash</option>
+              <option value="llama">Llama 3.2</option>
+              <option value="phi">Phi-3.5</option>
+            </select>
+          </div>
+          <div className={styles.messages}>
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`${styles.message} ${styles[message.role]}`}
+              >
+                <div className={styles.messageContent}>
+                  <span className={styles.roleIndicator}>
+                    {message.role === 'assistant' ? '🤖 AI' : '👤 You'}:
+                  </span>
+                  <ReactMarkdown>{message.content}</ReactMarkdown>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+              placeholder="Ask a question..."
+            />
+            <button className={styles.button} onClick={handleSendMessage}>Send</button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
