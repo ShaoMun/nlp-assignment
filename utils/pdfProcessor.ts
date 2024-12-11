@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import pdfParse from 'pdf-parse';
+import { preprocessText } from './nlpProcessor';
 
 interface ParsedPDF {
   id: string;
   name: string;
   content: string;
+  processedContent: string;
   timestamp: number;
 }
 
@@ -16,10 +18,13 @@ export const processPDF = async (file: Buffer, fileName: string): Promise<Parsed
   try {
     const pdfData = await pdfParse(file);
     
+    const processedContent = preprocessText(pdfData.text);
+    
     const pdfEntry = {
       id: uuidv4(),
       name: fileName,
       content: pdfData.text,
+      processedContent: processedContent,
       timestamp: Date.now(),
     };
 
@@ -100,5 +105,20 @@ export async function getPdfContent(pdfId: string): Promise<string> {
   } catch (error) {
     console.error('Error reading PDF:', error);
     throw new Error('Unable to read PDF content');
+  }
+}
+
+export async function reprocessAllPdfs(): Promise<void> {
+  try {
+    const pdfs = parse();
+    const reprocessedPdfs = pdfs.map(pdf => ({
+      ...pdf,
+      processedContent: preprocessText(pdf.content)
+    }));
+
+    fs.writeFileSync(DB_PATH, JSON.stringify(reprocessedPdfs, null, 2));
+  } catch (error) {
+    console.error('Error reprocessing PDFs:', error);
+    throw error;
   }
 }

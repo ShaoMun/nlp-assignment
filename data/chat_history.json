@@ -1,30 +1,44 @@
 [
   {
-    "id": "bb3076c4-d7d3-4471-8bea-f1ce4aba9d1e",
-    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
-    "timestamp": 1733921722942,
+    "id": "0b7473d2-39da-47e1-b3a3-f4ff034f23a3",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936955213,
     "role": "user",
-    "content": "tell me about this resume"
+    "content": "tell me more about this person. just tell me the name of the person"
   },
   {
-    "id": "067500d8-52f9-4fbd-9f4e-7c08dab40cf6",
-    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
-    "timestamp": 1733921722943,
+    "id": "99e65863-03b9-4a6c-9e26-b7db1124f9c1",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936955215,
     "role": "assistant",
-    "content": "The resume belongs to Liew Qi Jian, who is currently pursuing a Bachelor's Degree in Computer Science with a focus on Data Science at Tunku Abdul Rahman University College, where he has achieved a CGPA of 3.84. He previously completed his A-Levels and has a strong educational background from Chong Hwa Independent High School.\n\nIn terms of work experience, Liew has held various part-time positions, including a Software Assistant at KW Furniture Hardware, a Swimming Coach at Swimlife Academy, a Showroom Assistant at CIMA Lighting Sdn. Bhd., and is currently working as an Online Tuition Teacher at Little Master Education Holdings.\n\nHis leadership experience includes serving as Vice President of the Lion Dance Club in high school and founding the TARUMT Blockchain Club at university.\n\nLiew has a diverse skill set, including proficiency in several programming languages (C++, HTML, JavaScript, Python, etc.) and frameworks (React.js, TensorFlow, etc.), as well as experience in machine learning and data analytics. He is fluent in Mandarin, Bahasa Malaysia, and English.\n\nHe has received multiple awards and participated in various hackathons, achieving notable placements and winning projects. His projects cover a wide range of topics, including web applications, AI, and financial literacy platforms.\n\nAdditionally, he has shared a GitHub link for further exploration of his projects and coding work.\n\nIf you need more specific details or information about a particular section, feel free to ask!"
+    "content": "The person's name is Liew Qi Jian."
   },
   {
-    "id": "b7f28a21-82a3-4d0d-ae64-ef774eb4e957",
-    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
-    "timestamp": 1733921746525,
+    "id": "de7fd7e8-3eae-4536-9c1f-0ce05b2f6db3",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936964941,
     "role": "user",
-    "content": "tell me about this resume"
+    "content": "what he does"
   },
   {
-    "id": "be526cc0-ef95-4d6a-92be-c2b8e11714b3",
-    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
-    "timestamp": 1733921746528,
+    "id": "905f50cc-60b2-44ca-b5cb-54de79aebfbd",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936964942,
     "role": "assistant",
-    "content": "This resume presents Liew Qi Jian, a current Bachelor's Degree in Computer Science (Data Science) student at Tunku Abdul Rahman University College, boasting a CGPA of 3.84. His educational history includes A-Levels and SPM qualifications from Chong Hwa Independent High School.\n\nLiew's work experience is diverse, ranging from software assistance and swimming coaching to showroom assistance and online tuition.  He is currently employed as an Online Tuition Teacher at Little Master Education Holdings.  His longest-held position is as a Part-Time Software Assistant at KW FURNITURE HARDWARE, a role he's held since 2016.\n\nLeadership roles include Vice President of the Lion Dance Club in high school and Founder/President of the TARUMT Blockchain Club at university.\n\nHis skills encompass a wide array of programming languages (C++, Python, JavaScript, Solidity, etc.), frameworks (React.js, TensorFlow, etc.), and software proficiencies (SAS Studio, Adobe Photoshop, etc.).  He also highlights experience in machine learning, deep learning, web development, web3, and data analytics.  Liew is fluent in Mandarin, Bahasa Malaysia, and English.\n\nThe resume lists numerous achievements, including participation and awards in various hackathons, Dean's List and President's List achievements, and a \"Top Sales Award\" from CIMA Lighting Sdn. Bhd.  A significant portion of the resume is dedicated to his projects, which span web applications, AI, blockchain, and more. A GitHub link is provided for further review of his work.  The resume encourages reviewing the GitHub repository for a more complete picture of his projects, including those that are in progress or incomplete.\n"
+    "content": "Liew Qi Jian is currently pursuing a Bachelor Degree in Computer Science with a focus on Data Science. He has experience as a part-time software assistant, swimming coach, showroom assistant, and online tuition teacher. He is also involved in leadership roles, such as being the Vice President of the Lion Dance Club and the Founder/President of the TARUMT Blockchain Club. Additionally, he has worked on various projects related to programming, web development, and AI."
+  },
+  {
+    "id": "b2c673a5-fa6b-4133-8e7a-8471933d4fd1",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936987129,
+    "role": "user",
+    "content": "list the achievement that has a win"
+  },
+  {
+    "id": "09c420b9-e006-411d-a38f-1256002bd297",
+    "pdfId": "9266bbd0-8c9e-4440-8cf3-c8e4705c9ca7",
+    "timestamp": 1733936987131,
+    "role": "assistant",
+    "content": "Here are the achievements of Liew Qi Jian that involve a win:\n\n1. Champion in HackInsan 2024 @ USIM Nilai\n2. Champion in APUBCC Devmatch Hackathon for Aptos Track\n3. Winner in Near Protocol, World Coin Prize at ETH Global Singapore Hackathon\n4. Champion in Buildstation Ideathon 2024\n5. Winner in Monash Hackfest 2024\n6. Winner in ETH KL Hackathon\n\nThese achievements highlight his success in various hackathons and competitions."
   }
 ]

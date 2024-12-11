@@ -2,6 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getPdfContent } from '@/utils/pdfProcessor';
 import { getChatResponse } from '@/utils/openaiChat';
 import { getGeminiResponse } from '@/utils/geminiChat';
+import { getLlamaResponse } from '@/utils/llamaChat';
+import { getPhiResponse } from '@/utils/phiChat';
 import { addChatMessage } from '@/utils/chatHistory';
 
 export default async function handler(
@@ -36,12 +38,22 @@ export default async function handler(
         case 'gemini':
           response = await getGeminiResponse(question, pdfContent, pdfId);
           break;
+        case 'llama':
+          response = await getLlamaResponse(question, pdfContent, pdfId);
+          break;
+        case 'phi':
+          response = await getPhiResponse(question, pdfContent, pdfId);
+          break;
         default:
           return res.status(400).json({ message: 'Invalid model selection' });
       }
     } catch (error) {
       console.error('Model error:', error);
-      return res.status(500).json({ message: 'Error generating response', error: String(error) });
+      return res.status(500).json({ 
+        message: 'Error generating response', 
+        error: String(error),
+        model: model
+      });
     }
 
     // Save the conversation to history

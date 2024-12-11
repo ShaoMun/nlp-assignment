@@ -13,7 +13,7 @@ interface PDF {
   name: string;
 }
 
-type ModelType = 'gpt4o' | 'gemini' | 'llama';
+type ModelType = 'gpt4o' | 'gemini' | 'llama' | 'phi';
 
 export default function Home() {
   const [pdfs, setPdfs] = useState<PDF[]>([]);
@@ -150,6 +150,7 @@ export default function Home() {
             <option value="gpt4o">GPT-4o-mini</option>
             <option value="gemini">Gemini 1.5 Flash</option>
             <option value="llama">Llama 3.2</option>
+            <option value="phi">Phi-3.5</option>
           </select>
         </div>
         <div className={styles.messages}>
