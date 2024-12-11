@@ -16,7 +16,7 @@ export async function getChatResponse(
 
     const messages = [
       {
-        role: "system",
+        role: "system" as const,
         content: `You are a helpful assistant that answers questions based on the provided PDF content. 
                  Your responses should be:
                  1. Accurate and based only on the PDF content
@@ -29,17 +29,17 @@ export async function getChatResponse(
       },
       // Add recent conversation history
       ...recentMessages.map(msg => ({
-        role: msg.role,
+        role: msg.role as 'system' | 'user' | 'assistant',
         content: msg.content
       })),
       {
-        role: "user",
+        role: "user" as const,
         content: question
       }
     ];
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // Updated to a more capable model
+      model: "gpt-4o-mini", 
       messages,
       temperature: 0.7,
       max_tokens: 500,

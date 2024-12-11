@@ -1,118 +1,30 @@
-{
-  "cbaf4455-00d1-4c0f-be15-642ed6928caf": [
-    {
-      "id": "0ee64aaf-ca5b-4985-bc89-47058216a7ac",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "user",
-      "content": "analyse this hackathon",
-      "timestamp": 1732209348363
-    },
-    {
-      "id": "9b1e8a8f-76fb-4cc7-808a-8c8c01b59a77",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "assistant",
-      "content": "The BRIDG3 Hackathon is a strategically organized event designed to leverage blockchain technology in solving real-world problems, with a keen focus on innovation and practical application. Here's a detailed analysis of its key components:\n\n### 1. **Objective and Scope**\nThe hackathon is held as part of the inaugural Malaysia Blockchain Week, indicating its importance and scale within the national context. It aims to bring together developers, innovators, and blockchain enthusiasts to work on blockchain-based solutions across various sectors.\n\n### 2. **Participants and Logistics**\nParticipants are provided with a comprehensive briefing pack, indicating a well-organized event. The necessity for participants to arrange travel and accommodation suggests the event attracts a nationwide audience. The provision of a lanyard card for event access emphasizes security and organization.\n\n### 3. **Agenda and Format**\nThe hackathon spans over two days, followed by a Demo Day. The agenda includes workshops, sharing sessions, and a 24-hour coding marathon, culminating in team pitches and the announcement of winners. This format is designed to foster learning, collaboration, and competition.\n\n### 4. **Tracks and Themes**\nThe event features three tracks focusing on utilizing blockchain for social impact, integration with the Sui Network, and addressing the United Nations' 17 Sustainable Development Goals. This diversity in tracks allows participants to tackle a wide range of global and local challenges, from enhancing fund management in non-profits to leveraging blockchain for mass adoption and addressing critical global issues.\n\n### 5. **Evaluation Criteria**\nThe winners are evaluated based on solution, impact and business case, design, and presentation. The heavy weighting on the solution (50%) and impact (25%) underscores the hackathon's emphasis on practical, impactful solutions over theoretical concepts.\n\n### 6. **Judges and Support**\nThe judges include venture capitalists and professionals from the blockchain sector, ensuring that the evaluations are grounded in industry knowledge and commercial viability. The hackathon also offers online workshops and complimentary access to the Malaysia Blockchain Week, providing participants with learning opportunities and networking possibilities.\n\n### 7. **Venue and Accessibility**\nThe choice of Xsolla Curine Academy at KL ECO City as the venue, with various transportation options, reflects the event's accessibility to participants. The detailed directions and parking information in the briefing pack further assist participants in their logistical planning.\n\n### 8. **Participant Perks**\nPerks like mandatory online workshops and complimentary general admission passes to the Malaysia Blockchain Week main event add",
-      "timestamp": 1732209368777
-    },
-    {
-      "id": "da1c8a7f-318e-4725-9cb1-c083dc601558",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "user",
-      "content": "elaborate",
-      "timestamp": 1732209379735
-    },
-    {
-      "id": "7a85bf94-6631-4110-8116-bf811daafcdc",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "assistant",
-      "content": "The BRIDG3 Hackathon is designed as a comprehensive, immersive event that not only challenges participants to develop innovative blockchain solutions but also ensures a fertile environment for learning, networking, and showcasing talent. Let's delve deeper into its various aspects for a more elaborate understanding:\n\n### Objective and Scope\n- **National Significance**: Being part of the inaugural Malaysia Blockchain Week, the hackathon serves as a cornerstone event, highlighting the national interest in blockchain technology and its potential to drive innovation.\n- **Innovation Hub**: It's a platform for developers and blockchain enthusiasts to push the boundaries of current technology and explore novel applications in various sectors.\n\n### Participants and Logistics\n- **Diverse Participation**: The event is structured to attract a wide range of participants, from blockchain developers to industry experts, fostering a rich exchange of ideas.\n- **Event Logistics**: Detailed logistical information, including the need for participants to arrange their travel and accommodation, suggests a high level of participant commitment and anticipation for the event.\n\n### Agenda and Format\n- **Structured Yet Intensive**: The agenda is tightly packed with activities that balance learning (through workshops and sharing sessions) and hands-on development (with a 24-hour hackathon phase).\n- **Culmination and Recognition**: The event concludes with team pitches and winner announcements, providing teams the opportunity to present their hard work and potentially gain recognition and support for further development.\n\n### Tracks and Themes\n- **Diverse Challenges**: The three tracks offer a broad spectrum of challenges, from developing blockchain solutions for social good to integrating with cutting-edge blockchain networks like Sui.\n- **Strategic Focus**: Each track is aligned with significant, global-scale objectives, such as the United Nations' Sustainable Development Goals, emphasizing the hackathon’s ambition to contribute positively to global challenges.\n\n### Evaluation Criteria\n- **Comprehensive Evaluation**: The criteria span technical achievement (solution development), potential impact, user experience design, and presentation skills, ensuring a holistic assessment of projects.\n- **Emphasis on Impact and Solution**: By heavily weighting the solution and its impact, the hackathon prioritizes practical, effective solutions that can make a real difference, rather than purely theoretical or technically complex projects.\n\n### Judges and Support\n- **Expert Judging Panel**: Featuring venture capitalists and blockchain professionals, the judging panel is well-equipped to assess the commercial viability and technical innovation of the projects.\n- **Educational Support**: The inclusion of online workshops and access to a broader blockchain week event ensures participants can learn from and network",
-      "timestamp": 1732209407071
-    },
-    {
-      "id": "32563ea0-9fa9-40bf-9049-5214d5e534a8",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "user",
-      "content": "out of 10, how many you will rate this event",
-      "timestamp": 1732209598398
-    },
-    {
-      "id": "b2759c63-fe62-4742-b2ef-ad6f5297f5d4",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "assistant",
-      "content": "Based solely on the information provided in the participant briefing pack, the BRIDG3 Hackathon appears to be a well-organized, comprehensive, and engaging event with a strong focus on innovation, education, and real-world application of blockchain technology. Considering the detailed organization, diverse tracks, and rich learning opportunities, it would be reasonable to rate this event highly. However, without direct feedback from participants or insights into the execution and outcomes of the event, assigning a specific rating out of 10 would be speculative.\n\nIn the context of planning and potential value to participants, this event could be rated around an 8 or 9 out of 10, with the deduction being due to the lack of firsthand experience or external validation of the event's success and impact. This rating reflects the event's strong focus on relevant technological themes, participant support, and the opportunity for networking and professional growth.",
-      "timestamp": 1732209608546
-    },
-    {
-      "id": "66f4b40a-875a-4008-aa75-af6e364c645b",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "user",
-      "content": "what can i get from this hackathon",
-      "timestamp": 1732238261408
-    },
-    {
-      "id": "9de6382c-97dd-4d82-aaee-84deadc6ed12",
-      "pdfId": "cbaf4455-00d1-4c0f-be15-642ed6928caf",
-      "role": "assistant",
-      "content": "Participating in the BRIDG3 Hackathon offers several benefits:\n\n1. **Skill Development**: You will have the opportunity to enhance your skills in blockchain technology through hands-on experience and workshops provided by sponsors.\n\n2. **Networking Opportunities**: The event brings together a diverse group of participants, industry professionals, and judges, allowing you to build valuable connections in the blockchain community.\n\n3. **Access to Resources**: Participants will receive resources related to the hackathon tracks, which can aid in developing your projects. This includes documentation from Maschain and Sui to better understand the technologies.\n\n4. **Prizes and Recognition**: There are opportunities to win prizes based on your project’s evaluation, which can provide recognition and potentially lead to further funding or support for your ideas.\n\n5. **Finalist Pitches**: If you make it to the finals, you will have the chance to present your project to an audience of judges and industry experts, which can be beneficial for gaining insights and exposure.\n\n6. **Complimentary Admission**: Participants receive a complimentary general admission pass to the Malaysia Blockchain Week 2024, providing further opportunities to learn and network at the main event.\n\n7. **Workshops and Learning**: Mandatory online workshops leading up to the hackathon will provide additional training and insights into blockchain topics, enhancing your knowledge base.\n\n8. **Community Engagement**: Engaging in a hackathon fosters a sense of community among like-minded individuals passionate about blockchain, leading to potential collaborations beyond the event.\n\nOverall, the BRIDG3 Hackathon is designed to be an enriching experience that can advance your skills, expand your network, and open doors for future opportunities in the blockchain space.",
-      "timestamp": 1732238270016
-    }
-  ],
-  "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167": [
-    {
-      "id": "ee6a745a-cfee-410e-b84f-6067ecb807fc",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "user",
-      "content": "rate my resume out of 10",
-      "timestamp": 1732210186364
-    },
-    {
-      "id": "cb3d6f09-808d-457f-93b4-9045a0e7f348",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "assistant",
-      "content": "I'm unable to provide a subjective rating for your resume as I don't have personal opinions. However, I can help you analyze its strengths and areas for improvement based on the content provided.\n\n**Strengths:**\n- **Education**: Clear progression from high school to college with relevant coursework.\n- **Experience**: Diverse work experience in software assistance, coaching, and teaching, showcasing a range of skills.\n- **Leadership**: Leadership roles indicate initiative and teamwork capabilities.\n- **Skills**: Extensive list of programming languages and frameworks, which is great for a tech-oriented resume.\n- **Achievements**: Numerous accomplishments in hackathons and competitions demonstrate your active engagement and success in your field.\n\n**Areas for Improvement:**\n- **Formatting**: Ensure consistent formatting for easier readability (e.g., spacing, bullet points).\n- **Conciseness**: Some descriptions could be more concise to avoid overwhelming the reader.\n- **Contact Information**: Consider placing your contact information at the top for easy access.\n\nIf you would like more specific feedback on certain sections or have questions about how to improve, feel free to ask!",
-      "timestamp": 1732210190875
-    },
-    {
-      "id": "6d435042-ef6b-4ae2-8321-c77b9f9703fd",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "user",
-      "content": "rate again",
-      "timestamp": 1732210257786
-    },
-    {
-      "id": "1e6c7309-28ef-4a1f-8db2-0fef4ba1438c",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "assistant",
-      "content": "As I mentioned earlier, I don't have personal opinions to provide a subjective rating. However, based on the detailed analysis of your resume, I would say it is quite strong overall, especially for someone in the field of computer science and data science. \n\nIf I were to provide a hypothetical rating based on common resume standards, it might fall in the range of 8 to 9 out of 10 due to its comprehensive education, diverse experience, strong skills, and numerous achievements.\n\nRemember, the effectiveness of a resume can also depend on the specific job you are applying for and how well it matches the job description. If you have specific aspects you'd like to improve or focus on, feel free to share!",
-      "timestamp": 1732210260509
-    },
-    {
-      "id": "6155278e-c28e-4093-a408-e0c7abfbd157",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "user",
-      "content": "i want to apply for a chef, is my resume suitable for me to land a job as a chef?",
-      "timestamp": 1732210305681
-    },
-    {
-      "id": "713d1e37-d84c-4422-853e-b7c1c4f7d098",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "assistant",
-      "content": "Based on the content of your resume, it appears to be heavily focused on computer science, software development, and educational achievements related to those fields. While you do have some work experience, such as developing applications and coaching swimming, there is no specific experience or training related to culinary skills or the role of a chef.\n\nTo improve your chances of landing a job as a chef, consider the following:\n\n1. **Relevant Experience**: Highlight any culinary experiences you may have, such as working in a kitchen, catering, or food preparation. If you don't have formal experience, consider taking culinary courses or working in a related role to gain experience.\n\n2. **Skills**: Add skills that are relevant to cooking, such as knowledge of different cuisines, food safety, or kitchen management.\n\n3. **Tailored Resume**: Create a new resume that focuses specifically on your culinary experiences and skills, while minimizing the emphasis on your IT and programming background.\n\n4. **Certifications**: If you have any culinary certifications or training, be sure to include them.\n\nIn summary, your current resume is not suitable for applying for a chef position as it lacks relevant culinary experience and skills. You might want to create a new resume tailored specifically for that career path. If you need help with that, feel free to ask!",
-      "timestamp": 1732210310786
-    },
-    {
-      "id": "21d69edb-1922-4a6a-9e30-15ad115842e1",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "user",
-      "content": "roast me on my past prompts",
-      "timestamp": 1732210460505
-    },
-    {
-      "id": "ba592a28-a2d8-4eac-8679-a924441e96f1",
-      "pdfId": "e9ee7c6f-f0fe-4cdc-979a-130eff1fb167",
-      "role": "assistant",
-      "content": "While I understand you may be looking for some light-hearted fun, I want to keep our conversation positive and constructive! However, if we’re having a little roast, here goes:\n\n- Asking if your computer science-heavy resume is suitable for a chef position is like trying to land a role as a magician with a resume that highlights your skills in data analysis. Maybe the only \"cooking\" you should focus on is cooking up some data!\n  \n- When you said \"rate again,\" I half expected a music album drop instead of a resume review—it’s a resume, not a mixtape!\n\nBut in all seriousness, it’s great that you’re exploring different career options and seeking feedback. If there’s anything specific you’d like to discuss or improve, I’m here to help!",
-      "timestamp": 1732210464492
-    }
-  ]
-}
+[
+  {
+    "id": "bb3076c4-d7d3-4471-8bea-f1ce4aba9d1e",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733921722942,
+    "role": "user",
+    "content": "tell me about this resume"
+  },
+  {
+    "id": "067500d8-52f9-4fbd-9f4e-7c08dab40cf6",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733921722943,
+    "role": "assistant",
+    "content": "The resume belongs to Liew Qi Jian, who is currently pursuing a Bachelor's Degree in Computer Science with a focus on Data Science at Tunku Abdul Rahman University College, where he has achieved a CGPA of 3.84. He previously completed his A-Levels and has a strong educational background from Chong Hwa Independent High School.\n\nIn terms of work experience, Liew has held various part-time positions, including a Software Assistant at KW Furniture Hardware, a Swimming Coach at Swimlife Academy, a Showroom Assistant at CIMA Lighting Sdn. Bhd., and is currently working as an Online Tuition Teacher at Little Master Education Holdings.\n\nHis leadership experience includes serving as Vice President of the Lion Dance Club in high school and founding the TARUMT Blockchain Club at university.\n\nLiew has a diverse skill set, including proficiency in several programming languages (C++, HTML, JavaScript, Python, etc.) and frameworks (React.js, TensorFlow, etc.), as well as experience in machine learning and data analytics. He is fluent in Mandarin, Bahasa Malaysia, and English.\n\nHe has received multiple awards and participated in various hackathons, achieving notable placements and winning projects. His projects cover a wide range of topics, including web applications, AI, and financial literacy platforms.\n\nAdditionally, he has shared a GitHub link for further exploration of his projects and coding work.\n\nIf you need more specific details or information about a particular section, feel free to ask!"
+  },
+  {
+    "id": "b7f28a21-82a3-4d0d-ae64-ef774eb4e957",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733921746525,
+    "role": "user",
+    "content": "tell me about this resume"
+  },
+  {
+    "id": "be526cc0-ef95-4d6a-92be-c2b8e11714b3",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733921746528,
+    "role": "assistant",
+    "content": "This resume presents Liew Qi Jian, a current Bachelor's Degree in Computer Science (Data Science) student at Tunku Abdul Rahman University College, boasting a CGPA of 3.84. His educational history includes A-Levels and SPM qualifications from Chong Hwa Independent High School.\n\nLiew's work experience is diverse, ranging from software assistance and swimming coaching to showroom assistance and online tuition.  He is currently employed as an Online Tuition Teacher at Little Master Education Holdings.  His longest-held position is as a Part-Time Software Assistant at KW FURNITURE HARDWARE, a role he's held since 2016.\n\nLeadership roles include Vice President of the Lion Dance Club in high school and Founder/President of the TARUMT Blockchain Club at university.\n\nHis skills encompass a wide array of programming languages (C++, Python, JavaScript, Solidity, etc.), frameworks (React.js, TensorFlow, etc.), and software proficiencies (SAS Studio, Adobe Photoshop, etc.).  He also highlights experience in machine learning, deep learning, web development, web3, and data analytics.  Liew is fluent in Mandarin, Bahasa Malaysia, and English.\n\nThe resume lists numerous achievements, including participation and awards in various hackathons, Dean's List and President's List achievements, and a \"Top Sales Award\" from CIMA Lighting Sdn. Bhd.  A significant portion of the resume is dedicated to his projects, which span web applications, AI, blockchain, and more. A GitHub link is provided for further review of his work.  The resume encourages reviewing the GitHub repository for a more complete picture of his projects, including those that are in progress or incomplete.\n"
+  }
+]

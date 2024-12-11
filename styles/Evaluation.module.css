@@ -1,69 +1,89 @@
 .container {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.evaluateButton {
-  padding: 10px 20px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 20px 0;
-}
-
-.evaluateButton:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.results {
-  margin-top: 2rem;
+.summary {
+  background: #f5f5f5;
   padding: 1.5rem;
-  border: 1px solid #eaeaea;
   border-radius: 8px;
-  background-color: #f8f9fa;
+  margin-bottom: 2rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .metric {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eaeaea;
-}
-
-.metric:last-child {
-  border-bottom: none;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .metric label {
+  font-weight: 500;
+  color: #666;
+}
+
+.metric span {
   font-weight: 600;
+  color: #2563eb;
 }
 
-.error {
-  color: #dc3545;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  border-radius: 4px;
+.evaluationCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+.factLists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.backLink {
-  color: #0070f3;
-  text-decoration: none;
+.factList {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
 }
 
-.backLink:hover {
-  text-decoration: underline;
+.factList h4 {
+  margin: 0 0 0.5rem 0;
+  color: #4b5563;
+}
+
+.factList ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.factList li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.title {
+  color: #1f2937;
+}
+
+.subtitle {
+  color: #1f2937;
+}
+
+.responseTitle {
+  color: #374151;
+  margin: 0 0 1rem 0;
 } 

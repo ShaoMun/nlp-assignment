@@ -14,7 +14,6 @@ const DB_PATH = path.join(process.cwd(), 'data', 'pdfs.json');
 
 export const processPDF = async (file: Buffer, fileName: string): Promise<ParsedPDF> => {
   try {
-    // Parse PDF content
     const pdfData = await pdfParse(file);
     
     const pdfEntry = {
@@ -24,20 +23,17 @@ export const processPDF = async (file: Buffer, fileName: string): Promise<Parsed
       timestamp: Date.now(),
     };
 
-    // Ensure data directory exists
     const dataDir = path.join(process.cwd(), 'data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    // Read existing data
     let existingData: ParsedPDF[] = [];
     if (fs.existsSync(DB_PATH)) {
       const content = fs.readFileSync(DB_PATH, 'utf-8');
       existingData = content ? JSON.parse(content) : [];
     }
 
-    // Add new PDF and save
     existingData.push(pdfEntry);
     fs.writeFileSync(DB_PATH, JSON.stringify(existingData, null, 2));
 
@@ -59,7 +55,6 @@ export function parse(): ParsedPDF[] {
   try {
     ensureDirectoryExists();
     
-    // If file doesn't exist, create it with empty array
     if (!fs.existsSync(DB_PATH)) {
       fs.writeFileSync(DB_PATH, '[]', 'utf-8');
       return [];
@@ -67,16 +62,13 @@ export function parse(): ParsedPDF[] {
 
     const content = fs.readFileSync(DB_PATH, 'utf-8');
     
-    // If file is empty or whitespace, initialize it
     if (!content.trim()) {
       fs.writeFileSync(DB_PATH, '[]', 'utf-8');
       return [];
     }
 
-    // Try to parse the content
     const parsed = JSON.parse(content);
     
-    // Verify that we got an array
     if (!Array.isArray(parsed)) {
       fs.writeFileSync(DB_PATH, '[]', 'utf-8');
       return [];
@@ -85,8 +77,28 @@ export function parse(): ParsedPDF[] {
     return parsed;
   } catch (error) {
     console.error('Error in parse function:', error);
-    // Reset file to valid state
     fs.writeFileSync(DB_PATH, '[]', 'utf-8');
     return [];
+  }
+}
+
+export async function getPdfContent(pdfId: string): Promise<string> {
+  try {
+    const dbPath = path.join(process.cwd(), 'data', 'pdfs.json');
+    if (!fs.existsSync(dbPath)) {
+      throw new Error('PDF database not found');
+    }
+    
+    const pdfs: ParsedPDF[] = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
+    const pdf = pdfs.find(p => p.id === pdfId);
+    
+    if (!pdf) {
+      throw new Error(`PDF with ID ${pdfId} not found`);
+    }
+    
+    return pdf.content;
+  } catch (error) {
+    console.error('Error reading PDF:', error);
+    throw new Error('Unable to read PDF content');
   }
 }

@@ -13,12 +13,15 @@ interface PDF {
   name: string;
 }
 
+type ModelType = 'gpt4o' | 'gemini' | 'llama';
+
 export default function Home() {
   const [pdfs, setPdfs] = useState<PDF[]>([]);
   const [selectedPdf, setSelectedPdf] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [selectedModel, setSelectedModel] = useState<ModelType>('gpt4o');
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -66,9 +69,10 @@ export default function Home() {
         try {
           const response = await fetch(`/api/chat-history?pdfId=${selectedPdf}`);
           const history = await response.json();
-          setMessages(history);
+          setMessages(Array.isArray(history) ? history : []);
         } catch (error) {
           console.error('Error fetching chat history:', error);
+          setMessages([]);
         }
       }
     };
@@ -96,6 +100,7 @@ export default function Home() {
         body: JSON.stringify({
           question: input,
           pdfId: selectedPdf,
+          model: selectedModel,
         }),
       });
       if (!response.ok) {
@@ -136,6 +141,17 @@ export default function Home() {
       </div>
 
       <div className={styles.chat}>
+        <div className={styles.modelSelector}>
+          <select
+            value={selectedModel}
+            onChange={(e) => setSelectedModel(e.target.value as ModelType)}
+            className={styles.modelDropdown}
+          >
+            <option value="gpt4o">GPT-4o-mini</option>
+            <option value="gemini">Gemini 1.5 Flash</option>
+            <option value="llama">Llama 3.2</option>
+          </select>
+        </div>
         <div className={styles.messages}>
           {messages.map((message, index) => (
             <div

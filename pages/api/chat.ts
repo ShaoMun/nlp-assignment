@@ -1,64 +1,61 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { parse } from '@/utils/pdfProcessor';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getPdfContent } from '@/utils/pdfProcessor';
 import { getChatResponse } from '@/utils/openaiChat';
-import { saveChatMessage } from '@/utils/chatHistory';
-import { v4 as uuidv4 } from 'uuid';
+import { getGeminiResponse } from '@/utils/geminiChat';
+import { addChatMessage } from '@/utils/chatHistory';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
-    const { question, pdfId } = req.body;
-    
+    const { question, pdfId, model } = req.body;
+
     if (!question || !pdfId) {
-      return res.status(400).json({ 
-        message: 'Question and PDF ID are required' 
-      });
+      return res.status(400).json({ message: 'Missing required fields' });
     }
 
-    // Save user message
-    const userMessage = {
-      id: uuidv4(),
-      pdfId,
-      role: 'user' as const,
-      content: question,
-      timestamp: Date.now()
-    };
-    saveChatMessage(userMessage);
-
-    // Get all PDFs from database
-    const pdfs = parse();
-    
-    // Find the selected PDF
-    const selectedPdf = pdfs.find(pdf => pdf.id === pdfId);
-    
-    if (!selectedPdf) {
-      return res.status(404).json({ 
-        message: 'PDF not found' 
-      });
+    let pdfContent: string;
+    try {
+      pdfContent = await getPdfContent(pdfId);
+    } catch (error) {
+      console.error('PDF error:', error);
+      return res.status(404).json({ message: 'PDF not found or cannot be read' });
     }
 
-    // Get response from OpenAI
-    const response = await getChatResponse(question, selectedPdf.content, pdfId);
+    let response: string;
+    try {
+      switch (model) {
+        case 'gpt4o':
+          response = await getChatResponse(question, pdfContent, pdfId);
+          break;
+        case 'gemini':
+          response = await getGeminiResponse(question, pdfContent, pdfId);
+          break;
+        default:
+          return res.status(400).json({ message: 'Invalid model selection' });
+      }
+    } catch (error) {
+      console.error('Model error:', error);
+      return res.status(500).json({ message: 'Error generating response', error: String(error) });
+    }
 
-    // Save assistant message
-    const assistantMessage = {
-      id: uuidv4(),
-      pdfId,
-      role: 'assistant' as const,
-      content: response,
-      timestamp: Date.now()
-    };
-    saveChatMessage(assistantMessage);
+    // Save the conversation to history
+    try {
+      addChatMessage(pdfId, { role: 'user', content: question });
+      addChatMessage(pdfId, { role: 'assistant', content: response });
+    } catch (error) {
+      console.error('History error:', error);
+      // Don't fail the request if history saving fails
+    }
 
     res.status(200).json({ response });
   } catch (error) {
-    console.error('Chat API error:', error);
-    res.status(500).json({ 
-      message: 'Error processing chat request',
-      error: error instanceof Error ? error.message : 'Unknown error'
-    });
+    console.error('API error:', error);
+    res.status(500).json({ message: 'Internal server error', error: String(error) });
   }
 }

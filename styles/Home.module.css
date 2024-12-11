@@ -217,3 +217,23 @@
 .button:active {
   transform: translateY(0);
 }
+
+.modelSelector {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modelDropdown {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.modelDropdown:focus {
+  outline: none;
+  border-color: #0070f3;
+}
