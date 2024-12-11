@@ -40,5 +40,19 @@
     "timestamp": 1733936987131,
     "role": "assistant",
     "content": "Here are the achievements of Liew Qi Jian that involve a win:\n\n1. Champion in HackInsan 2024 @ USIM Nilai\n2. Champion in APUBCC Devmatch Hackathon for Aptos Track\n3. Winner in Near Protocol, World Coin Prize at ETH Global Singapore Hackathon\n4. Champion in Buildstation Ideathon 2024\n5. Winner in Monash Hackfest 2024\n6. Winner in ETH KL Hackathon\n\nThese achievements highlight his success in various hackathons and competitions."
+  },
+  {
+    "id": "1824c6c6-1044-4568-af41-8773aea573c5",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733940733537,
+    "role": "user",
+    "content": "hi"
+  },
+  {
+    "id": "15030a05-9bfd-4d3a-a873-db5acead09be",
+    "pdfId": "40f1ab7e-445a-4b39-ad8e-41ddb7b36f56",
+    "timestamp": 1733940733540,
+    "role": "assistant",
+    "content": "Hello! How can I assist you today?"
   }
 ]

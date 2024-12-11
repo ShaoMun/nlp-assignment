@@ -44,16 +44,16 @@ const ParticleBackground = () => {
       mountRef.current.appendChild(renderer.domElement);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 3000;
+      const particleCount = 3900;
 
       const posArray = new Float32Array(particleCount * 3);
-      const scaleArray = new Float32Array(particleCount);
+      const scaleArray = new Float32Array(particleCount * 99);
 
-      for (let i = 0; i < particleCount * 3; i += 3) {
+      for (let i = 0; i < particleCount * 3; i += 1) {
         posArray[i] = (Math.random() - 0.5) * 5;
         posArray[i + 1] = (Math.random() - 0.5) * 5;
         posArray[i + 2] = (Math.random() - 0.5) * 5;
-        scaleArray[i / 3] = Math.random();
+        scaleArray[i] = Math.random();
       }
 
       particles.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
@@ -69,7 +69,7 @@ const ParticleBackground = () => {
           varying float vScale;
           void main() {
             vScale = scale;
-            float size = scale * (0.02 + 0.02 * sin(time * 1.3 + scale * 10.0));
+            float size = scale * (0.02 + 0.082 * sin(time * 1.3 + scale * 100.0));
             vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
             gl_PointSize = size * (300.0 / -mvPosition.z);
             gl_Position = projectionMatrix * mvPosition;
@@ -100,8 +100,8 @@ const ParticleBackground = () => {
         const elapsedTime = clock.getElapsedTime();
         material.uniforms.time.value = elapsedTime;
 
-        particlesMesh.rotation.x += 0.00012;
-        particlesMesh.rotation.y += 0.00012;
+        particlesMesh.rotation.x += 0.00112;
+        particlesMesh.rotation.y += 0.00112;
         renderer.render(scene, camera);
         animationFrameId = requestAnimationFrame(animate);
       };
