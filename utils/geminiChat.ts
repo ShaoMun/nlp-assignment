@@ -11,8 +11,15 @@ export async function getGeminiResponse(
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
     const chatHistory = getChatHistory(pdfId);
-    const recentMessages = chatHistory.slice(-5);
+    
+    // Filter to get only the most recent 5 messages and ensure they alternate user/model
+    const recentMessages = chatHistory
+      .slice(-5)
+      .filter((msg, index) => 
+        index === 0 ? msg.role === 'user' : msg.role !== chatHistory[index - 1].role
+      );
 
+    // Create chat with proper history formatting
     const chat = model.startChat({
       history: recentMessages.map(msg => ({
         role: msg.role === 'user' ? 'user' : 'model',
@@ -34,16 +41,20 @@ export async function getGeminiResponse(
                          
                          PDF Content: ${pdfContent}`;
 
-    // Send system prompt first
-    await chat.sendMessage(systemPrompt);
+    // Send user question with system prompt
+    const result = await chat.sendMessage([
+      { text: systemPrompt },
+      { text: question }
+    ]);
     
-    // Send user question and get response
-    const result = await chat.sendMessage(question);
-    const response = result.response;
-    
-    return response.text();
+    return result.response.text();
   } catch (error) {
     console.error('Gemini API error:', error);
+    
+    // More detailed error handling
+    if (error instanceof Error) {
+      throw new Error(`Gemini API error: ${error.message}`);
+    }
     throw new Error('Failed to get response from Gemini');
   }
 } 
