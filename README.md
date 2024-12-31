@@ -10,7 +10,7 @@ GITHUB_TOKEN=
 
 install dependencies
 ```
-npm install
+npm install --legacy-peer-deps
 ```
 
 run the app
