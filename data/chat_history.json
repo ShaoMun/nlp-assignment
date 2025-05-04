@@ -174,5 +174,47 @@
     "timestamp": 1735374445875,
     "role": "assistant",
     "content": " James, it's essential to recognize that your mental health is a crucial part of your overall well-being. From the content of the document, it's clear that mental health is not a binary state but rather a spectrum that can change over time due to various factors, including work and personal circumstances.\n\nFirstly, it's important to acknowledge if you're feeling off or struggling. Mental health conditions like anxiety, depression, or substance misuse can develop when we're under a lot of stress or facing significant life changes. If you're experiencing symptoms such as persistent sadness, loss of interest, or difficulty coping, it's crucial to seek professional help.\n\nSecondly, consider the environment you're in. Work, for instance, can have a significant impact on our mental health. If you're in a stressful work environment, it could be contributing negatively to your mental health. Try to identify any workplace stressors and consider ways to manage or mitigate them.\n\nThirdly, remember that mental health is not just about the absence of a condition. It's about overall wellbeing, including the ability to enjoy life, cope with stress, and feel connected to others. Regularly engage in activities that bring you joy and help you relax.\n\nLastly, be mindful of the language you use when discussing mental health. Terms like 'crazy', 'psycho', or 'schizophrenic' can reinforce stigma and make people feel excluded. Instead, use person-first language, such as 'person with schizophrenia', to show respect and understanding.\n\nRemember, it's okay to seek help. If you're struggling, reach out to a mental health professional. They can provide guidance and support to help you navigate your mental health journey.\n\nIn conclusion, James, prioritizing your mental health is crucial. It's not a weakness to seek help, but a strength. Take care of yourself."
+  },
+  {
+    "id": "54c5857c-4a7a-428f-b60e-c1b3373d2ffb",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368346881,
+    "role": "user",
+    "content": "What is the fuel for rockets?"
+  },
+  {
+    "id": "0f324e52-a00c-459c-bdd7-eedd912b5d6d",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368346888,
+    "role": "assistant",
+    "content": "The provided PDF content does not mention anything about rockets or their fuel. Therefore, I cannot provide that information based on the content available. If you have any other questions related to mental health or the information in the PDF, feel free to ask!"
+  },
+  {
+    "id": "8102acfa-c42a-43fd-b553-cb60eb6dcdc0",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368389169,
+    "role": "user",
+    "content": "What is the fuel for rockets?"
+  },
+  {
+    "id": "3a46772a-8084-40ed-b54c-fbd348971e44",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368389176,
+    "role": "assistant",
+    "content": "The provided text discusses mental health and well-being, particularly in the workplace. It does *not* contain any information about rocket fuel.\n"
+  },
+  {
+    "id": "76496ff0-af46-41b2-83c9-28cf0a631286",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368396852,
+    "role": "user",
+    "content": "What is the fuel for rockets?"
+  },
+  {
+    "id": "91adb729-f22f-4c9c-bd7b-44079ae9da6c",
+    "pdfId": "3aacbfa4-4ade-4845-b678-d9e95f13a281",
+    "timestamp": 1746368396866,
+    "role": "assistant",
+    "content": "Unfortunately, I still can't help you with that. The PDF content doesn't mention rockets or rocket fuel at all. If you're looking for information on rocket fuel, I'd be happy to try and help you with that, but it would be in a completely different context."
   }
 ]

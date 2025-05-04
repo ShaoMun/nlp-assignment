@@ -179,9 +179,9 @@ def evaluate_model_responses(pdfs, chat_history):
 
 def main():
     # Load data
-    with open('pdfs.json', 'r') as f:
+    with open('pdfs.json', encoding='utf-8') as f:
         pdfs = json.load(f)
-    with open('chat_history.json', 'r') as f:
+    with open('chat_history.json', encoding='utf-8') as f:
         chat_history = json.load(f)
     
     # Evaluate

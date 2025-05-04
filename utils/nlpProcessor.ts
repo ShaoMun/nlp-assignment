@@ -1,6 +1,5 @@
 import natural from 'natural';
 import stopwords from 'stopwords';
-import { tokenize } from 'tokenize-text';
 import lemmatizer from 'lemmatizer';
 
 const tokenizer = new natural.WordTokenizer();
@@ -8,19 +7,20 @@ const stemmer = natural.PorterStemmer;
 
 export function preprocessText(text: string): string {
   try {
-    // 1. Text Normalization
-    let processedText = text.toLowerCase()  // Convert to lowercase
-      .replace(/\s+/g, ' ')                // Replace multiple spaces with single space
-      .replace(/[\r\n]+/g, ' ')            // Replace newlines with space
-      .replace(/[^\w\s]/g, '')             // Remove all non-word characters (punctuation)
-      .replace(/\d+/g, '')                 // Remove numbers
-      .trim();                             // Remove leading/trailing spaces
+    // 1. Normalize text
+    let cleaned = text
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/[^\w\s]/g, '')  // remove punctuation
+      .replace(/\d+/g, '')      // remove numbers
+      .trim();
 
-    // 2. Tokenization
-    const tokens = tokenizer.tokenize(processedText);
-    if (!tokens) return text;
+    // 2. Tokenize
+    const tokens = tokenizer.tokenize(cleaned);
+    if (!tokens || tokens.length === 0) return '';
 
-    // 3. Stop Words Removal (expanded list)
+    // 3. Stopwords
     const customStopwords = [
       ...stopwords.english,
       'etc', 'ie', 'eg', 'example', 'using', 'show', 'result', 'large', 'also',
@@ -30,37 +30,25 @@ export function preprocessText(text: string): string {
       ...['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
     ];
 
-    const filteredTokens = tokens.filter(token => 
-      !customStopwords.includes(token) && 
-      token.length > 2  // Remove short words
+    const filtered = tokens.filter(token => 
+      !customStopwords.includes(token) && token.length > 2 && !/^\d+$/.test(token)
     );
 
-    // 4. Stemming with Porter Stemmer
-    const stemmedTokens = filteredTokens.map(token => 
-      stemmer.stem(token)
-    );
+    if (filtered.length === 0) return '';
 
-    // 5. Lemmatization
-    const lemmatizedTokens = stemmedTokens.map(token => 
-      lemmatizer.lemmatize(token)
-    );
+    // 4. Stemming + Lemmatization
+    const finalTokens = filtered
+      .map(t => stemmer.stem(t))
+      .map(t => lemmatizer(t))
+      .filter(token => token.length > 1)
+      .map(token => token.trim());
 
-    // 6. Additional Processing
-    const processedTokens = lemmatizedTokens
-      .filter(token => token.length > 1)    // Remove single characters
-      .filter(Boolean)                      // Remove empty strings
-      .map(token => token.trim())          // Trim each token
-      .filter(token => !/^\d+$/.test(token)); // Remove pure numeric tokens
+    // 5. Recombine
+    const result = finalTokens.join(' ').replace(/\s+/g, ' ').trim();
+    return result;
 
-    // 7. Join and Final Cleanup
-    const finalText = processedTokens
-      .join(' ')
-      .replace(/\s+/g, ' ')  // Final space cleanup
-      .trim();
-
-    return finalText;
   } catch (error) {
-    console.error('Error in NLP preprocessing:', error);
-    return text;
+    console.error('Error in preprocessText:', error);
+    return '';
   }
-} 
+}

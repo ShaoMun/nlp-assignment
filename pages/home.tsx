@@ -6,7 +6,7 @@ import ParticleBackground from '../components/ParticleBackground';
 
 interface Message {
   role: 'user' | 'assistant';
-  content:  string;
+  content: string;
 }
 
 interface PDF {
